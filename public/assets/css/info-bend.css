@@ -1,0 +1,466 @@
+@font-face{
+    font-family: metro-black;
+    src : url(font/Metropolis-Black.otf);
+}
+
+@font-face{
+    font-family: metro-bold;
+    src : url(font/Metropolis-Bold.otf);
+}
+
+@font-face{
+    font-family: metro-light;
+    src : url(font/Metropolis-Light.otf);
+}
+
+@font-face{
+    font-family: metro-regular;
+    src : url(font/Metropolis-Regular.otf);
+}
+
+@font-face{
+    font-family: metro-medium;
+    src : url(font/Metropolis-Medium.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.header{
+    background-color: #162447;
+    color: #fff;
+    padding: 13px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: metro-light, sans-serif;
+    font-size: 12px;
+}
+
+.header .navbar{
+    display: flex;
+}
+
+.header .navbar .btn{
+    font-family: 'metro-medium', sans-serif;
+    margin-right: 20px;
+    background-color: #E43F5A;
+    color: #fff;
+    padding: 5px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header .navbar .btn:hover{
+    display: block;
+    background-color:#F0C605;
+    color: #162447;
+}
+
+.header .navbar .list{
+    background-color: rgb(0, 0, 0, 0);
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    top: 48px;
+    right: 97px;
+    overflow: hidden;
+}
+
+.header .navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .navbar ul {
+    display: block;
+    width: 140px;
+    flex-direction: column;
+    position: absolute;
+    top: -166px;
+    background-color: #E43F5A;
+    transition: all ease-in-out 0.5s;
+}
+
+.header .navbar ul li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    font-size: 11px;
+}
+
+.header .navbar ul a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.header .navbar ul a:hover{
+    background-color: #c21d3e;
+    color: #F0C605;
+}
+
+.alert-danger li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.alert-danger li{
+    list-style: none;
+}
+
+.alert-danger span{
+    font-family: metro-black;
+    margin-bottom: 10px;
+}
+
+.alert-success{
+    margin: 10px 0px;
+    background-color: #A8EF9B;
+    color: #096502;
+    padding: 10px 30px;
+    font-family: metro-light,sans-serif;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.alert-success li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.alert-success li{
+    list-style: none;
+}
+
+.alert-success span{
+    font-family: metro-black;
+    margin-bottom: 10px;
+}
+
+.body {
+    padding: 50px 100px;
+    font-family: metro-medium, sans-serif;
+}
+
+.body .title{
+    margin-bottom: 20px;
+}
+
+.body h2{
+    color: #E43F5A;
+}
+
+.body span{
+    color: #162447;
+}
+
+.info{
+    background-color:rgb(96, 181, 155, 0.6);
+    color: #286452;
+    padding: 100px;
+    width: 100%;
+    font-family: metro-light,sans-serif;
+    text-align: center;
+}
+
+.info-home{
+    background-color:#C7DEB0;
+    color:#475445;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+.info-home .judul{
+    font-family: metro-black, sans-serif;
+    margin-bottom: 10px;
+}
+
+.info-home .isi{
+    font-family: metro-light, sans-serif;
+    line-height: 1.5;
+}
+
+.info-home .isi span{
+    font-family: metro-bold, sans-serif;
+    color:#475445;
+}
+
+.alert-danger{
+    margin: 10px 0px;
+    background-color: #EF9B9B;
+    color: #A20B00;
+    padding: 10px 30px;
+    font-family: metro-light,sans-serif;
+    font-size: 10px;
+}
+
+.alert-danger li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.alert-danger li{
+    list-style: none;
+}
+
+.alert-danger span{
+    font-family: metro-black;
+    margin-bottom: 10px;
+}
+
+.alert-success{
+    margin: 10px 0px;
+    background-color: #A8EF9B;
+    color: #096502;
+    padding: 10px 30px;
+    font-family: metro-light,sans-serif;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.alert-success li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.alert-success li{
+    list-style: none;
+}
+
+.alert-success span{
+    font-family: metro-black;
+    margin-bottom: 10px;
+}
+
+.body button{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #162447;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.body button:hover{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #E43F5A;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+table.dataTable tbody th, table.dataTable tbody td{
+    padding: 8px 10px;
+    border: 1px solid rgba(112,112,112,0.5);
+    text-align: center;
+    font-size: 13px;
+}
+
+table.dataTable tbody td:nth-last-child(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table.dataTable tbody th, table.dataTable tbody td select{
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5em;
+    padding: 5px;
+}
+
+:root {
+    --modal-duration: 0.4s;
+    --modal-color: #E43F5A;
+  }
+  
+  .modalku .body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    position: relative;
+    top: -70px;
+    margin: 10% auto;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    font-family: metro-regular, sans-serif;
+  }
+  
+  .modal-header h2{
+    margin: 0;
+    font-family: metro-bold, sans-serif;
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+  
+  .modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .modal-body {
+    padding: 40px 40px;
+    background: #fff;
+  }
+
+  .modal-body .item{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+  }
+    .modal-body .item select{
+        padding: 7px;
+        border: 1px solid;
+    }
+
+    .modal-body .item textarea{
+        padding: 7px;
+    }
+
+    .modal-body .item button{
+        margin-top: 10px;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #162447;
+        color: #fff;
+        font-family: metro-regular,sans-serif;
+    }
+
+    .modal-body .item button:hover{
+        background-color: #1e3161;
+        color: #fff;
+    }
+
+  .modal-body .item input{
+      border: 1px solid;
+      padding: 5px;
+      width: 100%;
+  }
+
+  .modal-body .item label{
+      margin-bottom: 10px;
+  }
+  
+  .modal-footer {
+    background: var(--modal-color);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .close,.close-dana {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .close:hover,
+  .close:focus ,
+  .close-dana:hover,
+  .close-dana:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  
+
+#tabel-data_wrapper{
+    width: 100%;
+}
+
+footer{
+    background-color: #162447;
+    color: #eee;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: metro-light, sans-serif;
+    font-size: 12px;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+footer .copyright{
+    margin-top: 10px;
+}
+
+footer .sosmed{
+    display: flex;
+}
+
+footer .sosmed .gg{
+    border: 1px solid #fff;
+    padding: 2px 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+footer .sosmed .ig{
+    border: 1px solid #fff;
+    padding: 2px 6px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+footer .sosmed .fb{
+    border: 1px solid #fff;
+    padding: 2px 7px;
+    cursor: pointer;
+}
+
+footer .sosmed .fb:hover, .sosmed .ig:hover, .sosmed .gg:hover{
+    background-color: #fff;
+    color: #162447;
+}
